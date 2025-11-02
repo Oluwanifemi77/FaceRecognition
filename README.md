@@ -7,6 +7,16 @@ A complete, production-grade AI-powered web application that detects human emoti
 ![Flask](https://img.shields.io/badge/Flask-3.0-000000?logo=flask)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-FF6F00?logo=tensorflow)
 
+---
+
+## 📖 Quick Links
+
+- **🚀 [5-Minute Setup Guide](QUICK_SETUP.md)** - Get running locally fast!
+- **☁️ [Complete Deployment Guide](DEPLOYMENT_GUIDE.md)** - Deploy to Vercel & Render
+- **📚 Full Documentation** - You're reading it!
+
+---
+
 ## Features
 
 - **Modern React UI** with TailwindCSS and Framer Motion animations
