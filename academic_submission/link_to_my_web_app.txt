@@ -1,0 +1,53 @@
+EMOTION DETECTION WEB APP - DEPLOYMENT LINK
+
+========================================
+HOSTING PLATFORM OPTIONS
+========================================
+
+OPTION 1: RENDER.COM (Recommended - Free Tier)
+Platform: Render
+Link: [To be added after deployment]
+Instructions below in README_DEPLOYMENT.txt
+
+OPTION 2: RAILWAY.APP (Alternative - Free Tier)
+Platform: Railway
+Link: [To be added after deployment]
+Instructions below in README_DEPLOYMENT.txt
+
+OPTION 3: PYTHONANYWHERE (For Students)
+Platform: PythonAnywhere
+Link: [To be added after deployment]
+Instructions below in README_DEPLOYMENT.txt
+
+========================================
+GITHUB REPOSITORY
+========================================
+Repository: https://github.com/[YourUsername]/[RepositoryName]
+Branch: main
+
+========================================
+LOCAL TESTING
+========================================
+Local URL: http://127.0.0.1:5000
+Status: ✅ Working
+
+========================================
+DEPLOYMENT STEPS
+========================================
+
+1. Create account on chosen platform
+2. Connect GitHub repository
+3. Select Python 3.11 runtime
+4. Set build command: pip install -r requirements.txt
+5. Set start command: python app.py (or gunicorn app:app)
+6. Deploy and get your live URL
+
+Update this file with your actual deployment link after hosting!
+
+========================================
+STUDENT INFORMATION
+========================================
+Name: [Your Full Name]
+Matric Number: [Your Matric Number]
+Department: [Your Department]
+Date Submitted: [Submission Date]

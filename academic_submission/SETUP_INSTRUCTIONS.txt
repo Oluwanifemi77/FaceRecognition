@@ -1,0 +1,209 @@
+╔════════════════════════════════════════════════════════════════╗
+║     EMOTION DETECTION WEB APP - QUICK SETUP GUIDE              ║
+║     Academic Submission Version                                 ║
+╚════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════
+STEP 1: RENAME THIS FOLDER
+═══════════════════════════════════════════════════════════════════
+
+Current name: academic_submission
+
+Rename to: SURNAME_MAT.MATRICNUMBER
+
+Examples:
+  - ADEBAYO_MAT20191234
+  - OKONKWO_MAT20192456_EMOTION_DETECTION_WEB_APP
+
+═══════════════════════════════════════════════════════════════════
+STEP 2: UPDATE YOUR INFORMATION
+═══════════════════════════════════════════════════════════════════
+
+Edit these files and add your details:
+
+1. templates/index.html (Line 363)
+   Replace: [Your Name] - [Matric Number]
+
+2. link_to_my_web_app.txt (Bottom section)
+   Add your name and matric number
+
+3. README_ACADEMIC_SUBMISSION.md (Top section)
+   Add your complete information
+
+═══════════════════════════════════════════════════════════════════
+STEP 3: INSTALL DEPENDENCIES
+═══════════════════════════════════════════════════════════════════
+
+Open terminal in this folder and run:
+
+pip install -r requirements.txt
+
+Wait for installation to complete (may take 5-10 minutes)
+
+═══════════════════════════════════════════════════════════════════
+STEP 4: RUN THE APPLICATION
+═══════════════════════════════════════════════════════════════════
+
+python app.py
+
+Expected output:
+  ✅ Database initialized successfully!
+  ✅ Model loaded successfully! (or warning if not trained)
+  🎭 EMOTION DETECTION WEB APP
+  Server starting on http://127.0.0.1:5000
+
+Open browser: http://127.0.0.1:5000
+
+═══════════════════════════════════════════════════════════════════
+STEP 5: TEST THE APPLICATION
+═══════════════════════════════════════════════════════════════════
+
+Test 1 - Upload Image:
+  1. Click "Choose File"
+  2. Select image with a face
+  3. Click "Analyze Image"
+  4. Verify emotion detection works
+
+Test 2 - Webcam:
+  1. Click "Use Webcam"
+  2. Allow camera access
+  3. Click "Capture & Analyze"
+  4. Verify detection works
+
+═══════════════════════════════════════════════════════════════════
+STEP 6: UPLOAD TO GITHUB
+═══════════════════════════════════════════════════════════════════
+
+In terminal:
+
+git init
+git add .
+git commit -m "Emotion Detection Web App - Academic Submission"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
+
+Replace YOUR_USERNAME and YOUR_REPO with actual values.
+
+═══════════════════════════════════════════════════════════════════
+STEP 7: DEPLOY TO HOSTING PLATFORM
+═══════════════════════════════════════════════════════════════════
+
+OPTION A - RENDER.COM (Recommended):
+
+1. Go to https://render.com
+2. Sign up with GitHub
+3. Click "New" → "Web Service"
+4. Select your repository
+5. Settings:
+   - Name: emotion-detection-app
+   - Environment: Python 3
+   - Build Command: pip install -r requirements.txt
+   - Start Command: gunicorn app:app
+6. Click "Create Web Service"
+7. Wait for deployment (5-10 minutes)
+8. Copy your URL (e.g., https://your-app.onrender.com)
+
+OPTION B - RAILWAY.APP:
+
+1. Go to https://railway.app
+2. Sign up with GitHub
+3. New Project → "Deploy from GitHub repo"
+4. Select your repository
+5. Railway auto-deploys
+6. Click "Generate Domain"
+7. Copy your URL
+
+═══════════════════════════════════════════════════════════════════
+STEP 8: UPDATE LINK FILE
+═══════════════════════════════════════════════════════════════════
+
+Edit link_to_my_web_app.txt:
+
+Replace [To be added after deployment] with your actual URL
+
+Example:
+  Platform: Render
+  Link: https://emotion-detection-app-abc123.onrender.com
+
+═══════════════════════════════════════════════════════════════════
+STEP 9: TRAIN MODEL (OPTIONAL BUT RECOMMENDED)
+═══════════════════════════════════════════════════════════════════
+
+For better accuracy:
+
+1. Download FER2013 dataset from Kaggle
+2. Place fer2013.csv in this folder
+3. Edit model.py (uncomment line 281)
+4. Run: python model.py
+5. Wait for training (30-60 minutes)
+6. model.h5 will be created
+
+Without training, app uses demo predictions.
+
+═══════════════════════════════════════════════════════════════════
+SUBMISSION CHECKLIST
+═══════════════════════════════════════════════════════════════════
+
+Before submitting, verify:
+
+  [ ] Folder renamed to SURNAME_MAT.MATRICNUMBER
+  [ ] Personal information updated in all files
+  [ ] App runs locally without errors
+  [ ] Database created (database/emotion_detection.db exists)
+  [ ] model.h5 exists (train or will use demo)
+  [ ] GitHub repository created and pushed
+  [ ] Deployed to hosting platform
+  [ ] link_to_my_web_app.txt updated with deployment URL
+  [ ] Tested both upload and webcam features
+  [ ] README_ACADEMIC_SUBMISSION.md reviewed
+
+═══════════════════════════════════════════════════════════════════
+FOLDER CONTENTS VERIFICATION
+═══════════════════════════════════════════════════════════════════
+
+Required files:
+  ✓ app.py
+  ✓ model.py
+  ✓ templates/index.html
+  ✓ requirements.txt
+  ✓ link_to_my_web_app.txt
+  ✓ README_ACADEMIC_SUBMISSION.md
+  ✓ database/emotion_detection.db (created on first run)
+  ✓ model.h5 (after training or demo mode)
+
+═══════════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════
+
+Problem: "Module not found"
+Solution: pip install -r requirements.txt
+
+Problem: "Port already in use"
+Solution: Use different port: python app.py (edit app.py line 347)
+
+Problem: "No faces detected"
+Solution: Use clear, front-facing images with good lighting
+
+Problem: "Model not found warning"
+Solution: Either train model or ignore (app works with demo)
+
+Problem: Webcam not working
+Solution: Allow browser camera permissions, use HTTPS for production
+
+═══════════════════════════════════════════════════════════════════
+SUPPORT & RESOURCES
+═══════════════════════════════════════════════════════════════════
+
+  • Full documentation: README_ACADEMIC_SUBMISSION.md
+  • GitHub repository: Upload and share URL
+  • Deployment help: Check platform documentation
+  • FER2013 dataset: https://www.kaggle.com/datasets/msambare/fer2013
+
+═══════════════════════════════════════════════════════════════════
+
+GOOD LUCK WITH YOUR SUBMISSION! 🎓✨
+
+If app runs locally and you can detect emotions, you're ready to deploy!
+
+═══════════════════════════════════════════════════════════════════
