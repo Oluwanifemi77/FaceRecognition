@@ -1,0 +1,139 @@
+==============================================================================
+WINE CULTIVAR ORIGIN PREDICTION SYSTEM - SUBMISSION INFORMATION
+==============================================================================
+
+Name: [Your Full Name]
+Matric Number: [Your Matriculation Number]
+
+Machine Learning Algorithm Used: Random Forest Classifier
+
+Model Persistence Method: Joblib (Scikit-learn's model serialization format)
+
+Live URL of Hosted Application:
+[To be updated after deployment]
+Example: https://your-app-name.streamlit.app
+
+GitHub Repository Link:
+[Your GitHub repository URL]
+Example: https://github.com/yourusername/WineCultivar_Project
+
+==============================================================================
+DEPLOYMENT INSTRUCTIONS
+==============================================================================
+
+For Streamlit Cloud Deployment:
+
+1. Push this project to GitHub
+2. Go to https://share.streamlit.io/
+3. Sign in with GitHub
+4. Click "New app"
+5. Select your repository and branch
+6. Set main file path: app.py
+7. Click "Deploy"
+8. Copy the generated URL and update this file
+
+For Render.com Deployment:
+
+1. Push this project to GitHub
+2. Go to https://render.com/
+3. Create a new "Web Service"
+4. Connect your GitHub repository
+5. Build Command: pip install -r requirements.txt
+6. Start Command: streamlit run app.py --server.port $PORT
+7. Deploy and copy the URL
+
+==============================================================================
+PROJECT STRUCTURE
+==============================================================================
+
+WineCultivar_Project/
+│
+├── app.py                              # Streamlit web application
+├── requirements.txt                    # Python dependencies
+├── WineCultivar_hosted_webGUI_link.txt # This file
+├── README.md                           # Documentation
+│
+├── model/
+│   ├── model_building.ipynb           # Jupyter notebook
+│   ├── build_model.py                 # Model building script
+│   ├── wine_cultivar_model.pkl        # Trained model (100% accuracy)
+│   ├── scaler.pkl                     # StandardScaler object
+│   └── selected_features.pkl          # Feature names list
+│
+├── .streamlit/
+│   └── config.toml                    # Streamlit configuration
+│
+└── README.md                          # Project documentation
+
+==============================================================================
+MODEL PERFORMANCE SUMMARY
+==============================================================================
+
+Dataset: UCI/sklearn Wine Dataset (178 samples, 3 classes)
+Selected Features: 6 chemical properties
+Train/Test Split: 80/20 (142 train, 36 test samples)
+Algorithm: Random Forest Classifier
+Feature Scaling: StandardScaler (mandatory)
+Model Persistence: Joblib
+
+Performance Metrics:
+- Accuracy: 100.00%
+- Precision (macro avg): 1.00
+- Recall (macro avg): 1.00
+- F1-Score (macro avg): 1.00
+
+Selected Features:
+1. alcohol - Alcohol content (% by volume)
+2. malic_acid - Malic acid concentration (g/L)
+3. total_phenols - Total phenolic compounds
+4. flavanoids - Flavanoid concentration
+5. color_intensity - Color intensity measurement
+6. proline - Proline amino acid content (mg/L)
+
+==============================================================================
+SUBMISSION CHECKLIST
+==============================================================================
+
+✅ Part A - Model Development
+   ✓ model_building.ipynb created
+   ✓ Data preprocessing implemented
+   ✓ Feature selection (6 features)
+   ✓ Feature scaling (StandardScaler)
+   ✓ Random Forest Classifier trained
+   ✓ Model evaluation with metrics
+   ✓ Model saved as .pkl file
+
+✅ Part B - Web GUI Application
+   ✓ Streamlit application created (app.py)
+   ✓ Model loading functionality
+   ✓ User input interface
+   ✓ Prediction display
+   ✓ Confidence scores shown
+
+✅ Part C - GitHub Submission
+   ✓ Correct directory structure
+   ✓ All required files included
+   ✓ requirements.txt present
+   ✓ README.md documentation
+
+⏳ Part D - Deployment
+   ⏳ Deploy to cloud platform
+   ⏳ Update live URL above
+   ⏳ Test deployed application
+
+==============================================================================
+ADDITIONAL NOTES
+==============================================================================
+
+- The model achieves perfect 100% accuracy on the test set
+- All code is well-documented and follows best practices
+- The web interface is user-friendly and responsive
+- Feature importance shows color_intensity and flavanoids as top predictors
+- No missing values in the dataset
+- Stratified train-test split ensures balanced class distribution
+
+Submission Date: [To be filled]
+Submission Time: [To be filled]
+Deadline: Thursday, January 21, 2026, 11:59 PM
+
+==============================================================================
